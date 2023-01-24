@@ -33,7 +33,7 @@ function redondearHaciaArriba(num) {
    return Math.ceil(num);
 }
 
-function numeroRandom() {
+function numeroRandom(num) {
    // Genera un número al azar entre 0 y 1 y retórnalo.
    // Tu código:
    return Math.random (num);
