@@ -190,15 +190,25 @@ function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
-
+   let multiplicaXSeis = [];
+   for (let i = 0; i<=10; i++ ){
+      multiplicaXSeis.push(6 * i);
+   }
+   return multiplicaXSeis;
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
-}
-
+   let mayores = [];
+   for (let i=0; i<array.length; i++){
+      if(array[i] > 100){
+         mayores.push(array[i]);
+      }
+   }
+   return mayores;
+ }
 /* ----------------------------------------------------------------------------------
 💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
 -------------------------------------------------------------------------------------*/
@@ -210,6 +220,22 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   let arreglo = [];
+   let valor = num;
+   for (let i = 0; i < 10; i++){
+      valor = valor + 2;
+      if(valor === i) {
+         break;
+      }
+      else{
+         arreglo.push(valor);
+      }
+   }
+   if (arreglo.length < 10){
+      return "Se interrumpió la ejecución";
+   }else {
+      return arreglo;
+   }
 }
 
 function continueStatement(num) {
@@ -219,7 +245,21 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   let arreglo = [];
+   let valor = num;
+   for (let i = 0; i < 10; i++){
+      if(i+1 === 5) {
+         continue;
+      }
+      else{
+         valor = valor + 2;
+         arreglo.push(valor);
+      }
+   }
+   return arreglo;
 }
+
+
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
